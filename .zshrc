@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k" # set by `omz`
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zoxide tmux zsh-interactive-cd ssh)
+plugins=(git zoxide tmux zsh-interactive-cd ssh fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,7 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# 
+alias bat=batcat
+alias pv='vim $(fzf --preview="bat --color=always {}")'
 
 export PATH="/home/kaungsithu/.local/bin:$PATH"
 
