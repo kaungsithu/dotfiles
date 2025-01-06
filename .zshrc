@@ -109,7 +109,12 @@ source $ZSH/oh-my-zsh.sh
 alias bat=batcat
 alias pv='vim $(fzf --preview="bat --color=always {}")'
 
-export PATH="/home/kaungsithu/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# pyenv path
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 eval $(thefuck --alias fuck)
 
