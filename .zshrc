@@ -133,3 +133,8 @@ eval "$(uv generate-shell-completion zsh)"
 
 # brew auto update disable
 export HOMEBREW_NO_AUTO_UPDATE=True
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/kaungsithu/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
