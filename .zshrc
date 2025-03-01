@@ -130,3 +130,6 @@ eval "$(pyenv virtualenv-init -)"
 
 
 eval "$(uv generate-shell-completion zsh)"
+
+# brew auto update disable
+export HOMEBREW_NO_AUTO_UPDATE=True
